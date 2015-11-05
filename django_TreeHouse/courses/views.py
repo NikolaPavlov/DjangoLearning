@@ -11,3 +11,8 @@ def hello_world(request):
 def courses(request):
     courses = Course.objects.all()
     return render(request, 'courses/course_list.html', {'courses': courses})
+
+
+def course_list(request, pk):
+    course = Course.objects.get(pk=pk)
+    return render(request, 'courses/course_detail.html', {'course': course})
