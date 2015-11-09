@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'hr&s+2s_l)mh3fyyz5z^6%5p2e(a^to!0%t!1y8!-!sc&1rbv5'
+SECRET_KEY = '0lsxndd8cig)e_70#cu^m#wx+tyzkryrb06g@8yvf0p7now@6o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'lwc.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'joins/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -101,8 +101,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-
-# TEMPLATE_DIRS = (
-#     # os.path.join(BASE_DIR, 'templates'),
-#     BASE_DIR + '/templates/',
-# )

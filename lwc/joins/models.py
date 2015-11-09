@@ -4,8 +4,8 @@ from django.db import models
 # Create your models here.
 class Join(models.Model):
     email = models.EmailField()
-    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+    created = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
-        return self.email + ' ' + str(self.timestamp) + ' ' + str(self.updated)
+        return self.email
