@@ -20,5 +20,5 @@ from forms_tranning import urls as forms_tranning_urls
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^forms/', include(forms_tranning_urls)),
+    url(r'^forms', include(forms_tranning_urls)),
 ]

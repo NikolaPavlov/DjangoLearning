@@ -1,25 +1,18 @@
-from django.shortcuts import render
-from .forms import NameForm, EmailForm
-from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect
+from django.utils import timezone
+from .forms import MyModelForm
 
 
 # Create your views here.
-
-def get_name(request):
+def add_model(request):
     if request.method == 'POST':
-        form = NameForm(request.POST)
+        form = MyModelForm(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect('/thanks/')
+            model_instance = form.save(commit=False)
+            model_instance.timestapm = timezone.now()
+            model_instance.save()
+            return redirect('victory')
     else:
-        form = NameForm()
-    return render(request, 'name.html', {'form': form})
+        form = MyModelForm()
 
-
-def get_email(request):
-    if request.method == 'POST':
-        form = EmailForm(request.POST)
-        if form.is_valid():
-            return HttpResponseRedirect('/cool/')
-    else:
-        form = EmailForm()
-    return render(request, 'get_email.html', {'form': form})
+    return render(request, 'my_template.html', {'form': form})

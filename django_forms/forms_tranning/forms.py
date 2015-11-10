@@ -1,13 +1,13 @@
 from django import forms
+from .models import MyModel
 
 
-class NameForm(forms.Form):
-    subject = forms.CharField(max_length=200)
-    message = forms.CharField(widget=forms.Textarea)
-    sendeer = forms.EmailField()
-    cc_myself = forms.BooleanField(required=False)
+class UserForm(forms.Form):
+    username = forms.CharField()
+    joined_on = forms.DateTimeField()
 
 
-class EmailForm(forms.Form):
-    email = forms.EmailField(max_length=75)
-    content = forms.CharField()
+class MyModelForm(forms.Form):
+    class Meta:
+        model = MyModel
+        fields = ('title', )
