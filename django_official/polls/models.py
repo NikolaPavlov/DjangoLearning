@@ -3,8 +3,8 @@ from django.db import models
 
 # Create your models here.
 class Question(models.Model):
-    question_text = models.CharField(max_length=120)
-    pub_date = models.DateTimeField('date published')
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date publised')
 
     def __str__(self):
         return self.question_text
@@ -12,7 +12,7 @@ class Question(models.Model):
 
 class Choice(models.Model):
     question = models.ForeignKey(Question)
-    choice_text = models.CharField(max_length=120)
+    choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
 
     def __str__(self):

@@ -1,9 +1,8 @@
-{% if latest_question_list %}
-{% for question in latest_question_list %}
-<ul>
-    <a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a>
-</ul>
+{% extends 'base.html' %}
+
+{% block content %}
+{% for question in questions %}
+
+<br/>
 {% endfor %}
-{% else %}
-<h2>There is no questions in the database</h2>
-{% endif %}
+{% endblock %}
