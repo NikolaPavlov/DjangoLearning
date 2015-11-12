@@ -15,4 +15,4 @@ def add_model(request):
     else:
         form = MyModelForm()
 
-    return render(request, 'my_template.html', {'form': form})
+    return render(request, 'get_email.html', {'form': form})

@@ -13,17 +13,17 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Choice',
             fields=[
-                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
-                ('choice_text', models.CharField(max_length=200)),
+                ('id', models.AutoField(verbose_name='ID', auto_created=True, serialize=False, primary_key=True)),
+                ('choice_text', models.CharField(max_length=120)),
                 ('votes', models.IntegerField(default=0)),
             ],
         ),
         migrations.CreateModel(
             name='Question',
             fields=[
-                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
-                ('question_text', models.CharField(max_length=200)),
-                ('pub_date', models.DateTimeField()),
+                ('id', models.AutoField(verbose_name='ID', auto_created=True, serialize=False, primary_key=True)),
+                ('question_text', models.CharField(max_length=120)),
+                ('pub_date', models.DateTimeField(verbose_name='date published')),
             ],
         ),
         migrations.AddField(

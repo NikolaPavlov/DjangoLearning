@@ -1,19 +1,14 @@
 from django.contrib import admin
-from .models import Question
-from .models import Choice
+from .models import Question, Choice
+
 
 # Register your models here.
-# admin.site.register(Question)
-# admin.site.register(Choice)
-
-
 class QuestionAdmin(admin.ModelAdmin):
-    '''
-        this class reorder the fields in the admin
-        panel for Question
-    '''
-    fields = ['pub_date', 'question_text']
+    list_display = ('question_text', 'pub_date')
+    list_filter = ['pub_date']
+    search_fields = ['question_text']
 
-# register the Question for admin pannel, and for second
-# param add QuestionAdmin, for custom fields
+
+# admin.AdminSite.site_header = 'Polls administration site'
 admin.site.register(Question, QuestionAdmin)
+admin.site.register(Choice)
