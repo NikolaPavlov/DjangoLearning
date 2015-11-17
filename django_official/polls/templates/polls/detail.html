@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{question.question_text}}</h2>
+{% for choice in question.choice_set.all %}
+<p>{{choice.choice_text}}</p>
+{% endfor %}
+{% endblock %}
