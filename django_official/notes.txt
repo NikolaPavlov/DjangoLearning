@@ -1,8 +1,0 @@
-python manage.py check ---> chekc for isues withouth tuching the database
-python manage.py makemigrations ---> make migrations(sql statments)
-python manage.py migrate ---> apply migrations
-
-python manage.py shell ---> django shell
-forloop.counter ---> how many times forloop iterate
-
-generic view system 
