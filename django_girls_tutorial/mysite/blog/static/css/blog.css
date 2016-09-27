@@ -1,0 +1,26 @@
+.page-header {
+    background-color: green;
+    font-family: 'Lobster';
+    text-align: center;
+}
+
+.page-header a {
+    font-size: 50px;
+    color: red;
+}
+
+.post {
+    text-align: center;
+    background-color: gray;
+    padding-left: 15px;
+}
+
+.content {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.date {
+    margin-left: -80%;
+}
