@@ -11,4 +11,6 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.title
+        date_time_to_be_formated = self.created_date
+        formated_date_time = date_time_to_be_formated.strftime("%d/%m/%y %H:%M:%S")
+        return formated_date_time + ' ' + self.title
