@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Index page</title>
+    </head>
+    <body>
+        <!-- {% if questions %} -->
+            <ul>
+                {% for q in questions %}
+                    <p>{{q.question_text}}</p>
+                {% endfor %}
+            </ul>
+        <!-- {% else %} -->
+            <p>There is no questions</p>
+        <!-- {% endif %} -->
+    </body>
+</html>
