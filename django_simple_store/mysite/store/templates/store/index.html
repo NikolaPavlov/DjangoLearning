@@ -1,0 +1,15 @@
+{% extends "store/base.html" %}
+
+{% block content %}
+    {% for c in categories %}
+        <hr />
+        <h3>{{c.name_category}}</h3>
+        {% for p in c.product_set.all %}
+            <!-- <p>{{p.name_product}}</p> -->
+            <a href="{% url 'detail' p.id%}"
+                target="_blank">{{p.name_product}}</a>
+            <br />
+        {% endfor %}
+        <br />
+    {% endfor %}
+{% endblock content %}
