@@ -15,7 +15,7 @@ class Choice(models.Model):
     # if coresponding question is delete then delete all of his choices
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.TextField(max_length=200)
-    votes = models.IntegerField(default=0)
+    votes = models.IntegerField(default=1)
 
     def __str__(self):
         return self.choice_text
