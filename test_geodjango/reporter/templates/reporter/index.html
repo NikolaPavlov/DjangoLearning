@@ -1,0 +1,21 @@
+{% load leaflet_tags %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        {% leaflet_js %}
+        {% leaflet_css %}
+        <title> Title REPORTER index page</title>
+        {# <style type="text/css" media="all"> #}
+        {#     .leaflet-container { height: 777px; } #}
+        {# </style> #}
+    </head>
+
+    <body>
+        <h1>This is the reporter app index page!</h1>
+        <br />
+        {% leaflet_map "worldmap" %}
+    </body>
+</html>
