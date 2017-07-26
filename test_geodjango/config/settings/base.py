@@ -294,8 +294,8 @@ ADMIN_URL = r'^admin/'
 # need to fix this configs
 LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (42.0, 32.0),
-    'DEFAULT_ZOOM': 7,
-    'MIN_ZOOM': 3,
+    'DEFAULT_ZOOM': 4,
+    'MIN_ZOOM': 2,
     'MAX_ZOOM': 18,
     'MINIMAP': False,
     'RESET_VIEW': False,
